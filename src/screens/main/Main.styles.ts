@@ -36,12 +36,13 @@ export const ContentBox = styled(Box)(({ theme }) => ({
 
 export const Title = styled(Typography)(({ theme }) => ({
   width: "100%",
-  maxWidth: 700,
+  maxWidth: 600,
   marginLeft: "auto",
   marginRight: "auto",
   alignSelf: "flex-start",
   fontWeight: theme.typography.fontWeightBold,
   marginBottom: theme.spacing(4),
+  fontSize: 36,
   [theme.breakpoints.down("sm")]: {
     fontSize: 26,
     marginBottom: theme.spacing(2),
@@ -76,4 +77,4 @@ export const FabBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const fabSx = { width: 44, height: 44, minHeight: 44 }; 
+export const fabSx = { width: 50, height: 50, minHeight: 50 }; 

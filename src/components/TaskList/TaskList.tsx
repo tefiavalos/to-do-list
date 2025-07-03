@@ -27,7 +27,7 @@ const TaskList: React.FC<TaskListProps> = ({
 }) => (
   <TaskListPaper maxHeight={maxHeight}>
     <StickyTitle>
-      <Typography variant="h6" fontWeight={500} mt={0} mb={0} pt={3} pb={2}>
+      <Typography variant="h6" fontWeight={500} mt={0} mb={0} pt={4} pb={2} fontSize={20}>
         {title}
       </Typography>
     </StickyTitle>

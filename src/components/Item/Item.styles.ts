@@ -31,9 +31,9 @@ export const ItemBox = styled(Box)({
 export const ItemTitle = styled(Typography, {
   shouldForwardProp: (prop) => prop !== "$completed",
 })<{ $completed?: boolean }>(({ theme, $completed }) => ({
-  fontWeight: theme.typography.fontWeightRegular,
-  fontSize: theme.typography.subtitle1.fontSize,
-  color: $completed ? theme.palette.text.secondary : theme.palette.text.primary,
+  fontWeight: theme.custom.fontWeight400,
+  fontSize: theme.custom.fontSize14,
+  color: $completed ? "rgba(102,102,102,0.87)" : theme.palette.text.primary,
   [theme.breakpoints.down("sm")]: {
     fontSize: 14,
     maxWidth: 120,
@@ -46,11 +46,9 @@ export const ItemTitle = styled(Typography, {
 export const ItemDescription = styled(Typography, {
   shouldForwardProp: (prop) => prop !== "$completed",
 })<{ $completed?: boolean }>(({ theme, $completed }) => ({
-  fontWeight: theme.typography.fontWeightRegular,
-  fontSize: theme.custom.fontSizeSmall,
-  color: $completed
-    ? theme.palette.text.secondary
-    : theme.palette.text.secondary,
+  fontWeight: theme.custom.fontWeight400,
+  fontSize: theme.custom.fontSize14,
+  color: $completed ? "rgba(102,102,102,0.6)" : theme.palette.text.secondary,
   [theme.breakpoints.down("sm")]: {
     fontSize: 12,
     whiteSpace: "nowrap",
@@ -86,15 +84,20 @@ export const ItemChip = styled(Chip, {
 
 export const StyledCheckbox = styled(Checkbox)({
   marginRight: 16,
+  width: 18,
+  height: 18,
+  '& .MuiSvgIcon-root': {
+    fontSize: 18,
+  },
 });
 
 export const StyledIcon = styled("div", {
-  shouldForwardProp: (prop) => prop !== "$completed" && prop !== "$color",
-})<{ $completed?: boolean; $color?: string }>(
-  ({ theme, $completed, $color }) => ({
+  shouldForwardProp: (prop) => prop !== "$completed" && prop !== "$color" && prop !== "size",
+})<{ $completed?: boolean; $color?: string; size?: number }>(
+  ({ theme, $completed, $color, size }) => ({
     display: 'flex',
     alignItems: 'center',
-    fontSize: 22,
+    fontSize: size || 20,
     color: $completed ? theme.palette.text.disabledText : $color || "inherit",
     marginRight: 8,
   })

@@ -36,7 +36,7 @@ const Item: React.FC<ItemProps> = ({
       />
       {IconComponent && (
         <StyledIcon $completed={completed} $color={task.color ?? undefined}>
-          <IconComponent />
+          <IconComponent fontSize="inherit" />
         </StyledIcon>
       )}
       <ItemBox>

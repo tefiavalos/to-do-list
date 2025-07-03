@@ -21,6 +21,8 @@ declare module '@mui/material/styles' {
       itemBoxMinHeight: number;
       pillRadius: number;
       fontSizeSmall: number;
+      fontWeight400: number;
+      fontSize14: number;
     };
   }
   interface ThemeOptions {
@@ -43,6 +45,8 @@ declare module '@mui/material/styles' {
       itemBoxMinHeight?: number;
       pillRadius?: number;
       fontSizeSmall?: number;
+      fontWeight400?: number;
+      fontSize14?: number;
     };
   }
   interface Shape {
@@ -124,5 +128,7 @@ export const theme = createTheme({
     itemBoxMinHeight: 64,
     pillRadius: 100,
     fontSizeSmall: 12,
+    fontWeight400: 400,
+    fontSize14: 14,
   },
 }); 

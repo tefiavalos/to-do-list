@@ -70,7 +70,7 @@ function Main() {
           />
           <FabBox>
             <Fab color="primary" aria-label="add" onClick={handleOpen} sx={fabSx}>
-              <AddIcon />
+              <AddIcon fontSize="inherit" sx={{ fontSize: 14, fontWeight: 500 }} />
             </Fab>
           </FabBox>
         </TaskListBox>
