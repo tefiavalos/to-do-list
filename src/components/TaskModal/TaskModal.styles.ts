@@ -18,25 +18,10 @@ export const StyledDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
-export const StyledDialogTitle = styled(DialogTitle)(({ theme }) => ({
-  fontWeight: theme.typography.fontWeightBold,
-  fontSize: theme.typography.h6.fontSize,
-  paddingBottom: 0,
-  paddingTop: theme.spacing(3),
-  paddingLeft: theme.spacing(4),
-  paddingRight: theme.spacing(4),
-  [theme.breakpoints.down("sm")]: {
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
-    fontSize: 18,
-    paddingTop: theme.spacing(2),
-  },
-}));
-
 export const StyledDialogContent = styled(DialogContent)(({ theme }) => ({
   paddingTop: theme.spacing(2),
-  paddingLeft: theme.spacing(4),
-  paddingRight: theme.spacing(4),
+  paddingLeft: theme.spacing(2),
+  paddingRight: theme.spacing(2),
   [theme.breakpoints.down("sm")]: {
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),

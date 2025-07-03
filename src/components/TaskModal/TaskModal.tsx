@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Button, FormControl } from "@mui/material";
+import { FormControl } from "@mui/material";
 import { TaskModalProps } from "../../types/task";
 import {
   StyledDialog,
-  StyledDialogTitle,
   StyledDialogContent,
   StyledDialogActions,
   StyledTextField,
@@ -58,7 +57,6 @@ const TaskModal: React.FC<TaskModalProps> = ({
 
   return (
     <StyledDialog open={open} onClose={handleClose}>
-      <StyledDialogTitle>{isEdit ? "Modificar tarea" : "Nueva tarea"}</StyledDialogTitle>
       <StyledDialogContent>
         <TaskIconColorPicker
           activeTab={activeTab}
