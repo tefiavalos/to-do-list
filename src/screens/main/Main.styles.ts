@@ -76,4 +76,4 @@ export const FabBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const fabSx = { width: 50, height: 50, minHeight: 50 }; 
+export const fabSx = { width: 50, height: 50, minHeight: 50, cursor: 'pointer' }; 

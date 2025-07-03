@@ -184,6 +184,9 @@ export const StyledCreateButton = styled(Button)(({ theme }) => ({
   fontSize: "14px",
   fontWeight: theme.typography.fontWeightMedium,
   cursor: 'pointer',
+  '&:hover': {
+    cursor: 'pointer',
+  },
 }));
 
 export const StyledInputLabel = styled(InputLabel)(({ theme }) => ({
@@ -212,4 +215,7 @@ export const StyledCancelButton = styled(Button)(({ theme }) => ({
   fontWeight: theme.typography.fontWeightMedium,
   fontSize: "14px",
   cursor: 'pointer',
+  '&:hover': {
+    cursor: 'pointer',
+  },
 })); 
