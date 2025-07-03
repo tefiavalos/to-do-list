@@ -13,11 +13,11 @@
 - Marcar tareas como hechas o volverlas a pendientes con un click.
 - Editar cualquier tarea simplemente tocándola.
 - Todo queda guardado usando una API REST local (json-server).
-- Interfaz piola, rápida y que se adapta a cualquier pantalla.
+- Interfaz linda, rápida y que se adapta a cualquier pantalla.
 
 ## 🚦 ¿Cómo lo usás?
 
-1. **Cloná el repo:**
+1. **Cloná el repo**
 
 2. **Instalá las dependencias:**
    ```bash
@@ -33,7 +33,7 @@
    npm run dev
    ```
 
-Abrí el navegador en [http://localhost:5173](http://localhost:5173) y listo, ¡a organizar tu día!
+Abrí el navegador en [http://localhost:5173](http://localhost:5173) y... ¡Listo!
 
 ## 💡 Decisiones de diseño
 
@@ -57,4 +57,4 @@ src/
 - Hecho con mucho mate por Estefanía Avalos.
 
 ---
-¡Gracias por tu pasar!
+¡Gracias por pasar!
