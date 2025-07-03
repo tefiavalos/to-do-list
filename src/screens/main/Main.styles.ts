@@ -25,11 +25,13 @@ export const ContentBox = styled(Box)(({ theme }) => ({
   alignItems: "center",
   position: "relative",
   flex: 1,
-  minHeight: 0,
+  minHeight: "100vh",
+  height: "100vh",
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(1.5),
     borderRadius: 0,
     minHeight: "100vh",
+    height: "100vh",
     boxShadow: "none",
   },
 }));
