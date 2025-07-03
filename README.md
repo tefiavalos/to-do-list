@@ -1,49 +1,63 @@
-# Ejercicio técnico frontend - Minder
+# 📝 Minder To-Do List
 
-## Consigna
-A partir del código de este repositorio, crear una aplicación web (SPA) utlizando React que sirva para realizar un seguimiento de tareas pendientes (To-Do List).
+¡Bienvenido/a! Este es un gestor de tareas hecho en **React** y **Material UI**, ideal para que no se te pase nada y puedas organizarte como corresponde. Acá vas a poder crear, editar, marcar como hechas y personalizar tus tareas con categorías, íconos y colores, todo con una onda bien moderna y responsiva.
 
-### Formato de entrega
-Se debe subir la solución a un repositorio de código a elección (puede ser GitHub, GitLab o Bitbucket entre otros) y enviar el link a dicho repositorio.
+## ✨ ¿Qué podés hacer?
 
-### Paquetes a utilizar
-Es obligatorio el uso de MUI como biblioteca de componentes. El archivo ```/package.json``` ya tiene una serie de paquetes incluídos para facilitar el desarrollo. Se pueden agregar nuevos paquetes en el caso de considerarse necesario.
+- Ver tus tareas pendientes y las que ya tachaste, cada una en su sección.
+- Crear y editar tareas con:
+  - Título (obligatorio, hasta 40 caracteres)
+  - Descripción (opcional, hasta 100 caracteres)
+  - Categoría (la elegís de una lista)
+  - Ícono y color a gusto
+- Marcar tareas como hechas o volverlas a pendientes con un click.
+- Editar cualquier tarea simplemente tocándola.
+- Todo queda guardado usando una API REST local (json-server).
+- Interfaz piola, rápida y que se adapta a cualquier pantalla.
 
-### Historias de usuario
-Las siguientes historias de usuario definen los requerimientos de la aplicación:
+## 🚦 ¿Cómo lo usás?
 
-- Las tareas tienen título, descripción, categoría y estado. El estado puede ser "Pendiente" o "Terminada".
-- Como usuario quiero ver un listado de mis tareas pendientes y terminadas con el siguiente diseño: [diseño en Figma](https://www.figma.com/file/4Zwx6CXgKhV8yRGaIBnQK9/To-Do-List?type=design&node-id=0%3A1&mode=design&t=vOfS9v6wmkyCJvcF-1). Cada una de las tareas listadas muestra si está terminada o no, su título, descripción y categoría.
-- Como usuario puedo marcar una tarea pendiente como tarea terminada haciendo click en el checkbox de la tarea. Luego de marcada como terminada, la tarea se lista bajo la sección de tareas terminadas.
-- Como usuario puedo desmarcar una tarea terminada y volverla al estado pendiente haciendo click en el checkbox de la tarea. Luego de marcada como pendiente, la tarea se lista bajo la sección tareas pendientes.
-- Como usuario abro el formulario "Nueva tarea" desde el botón "+" de la esquina inferior derecha (FAB).
-- Como usuario puedo crear una nueva tarea completando el formulario "Nueva tarea" con los siguientes campos y luego haciendo click en el botón "Crear":
-  - Título: obligatorio, máximo 40 caracteres.
-  - Descripción: opcional, máximo 100 caracteres.
-  - Categoría: obligatorio, dropdown con opciones obtenidas desde la API REST.
-- Como usuario puedo cerrar el formulario "Nueva tarea" haciendo click en el botón "Cancelar" o haciendo click por fuera del formulario.
-- Como usuario quiero que las tareas que creo y modifico queden guardadas en una base de datos. Para acceder a la base de datos se utilizará una API REST. Ver sección [Persistencia de datos](#persistencia-de-datos).
+1. **Cloná el repo:**
+   ```bash
+   git clone https://github.com/tu-usuario/minder-sa-frontend-exercise.git
+   cd minder-sa-frontend-exercise
+   ```
+2. **Instalá las dependencias:**
+   ```bash
+   npm install
+   ```
+3. **Levantá la API (json-server):**
+   ```bash
+   npm run db
+   ```
+   Esto va a levantar la API REST local en [http://localhost:3000](http://localhost:3000).
+4. **Arrancá la app:**
+   ```bash
+   npm run dev
+   ```
 
-Puntos extras por:
-- Como usuario puedo seleccionar un ícono para cada una de las tareas.
-- Como usuario puedo seleccionar un color para el ícono de cada una de las tareas.
-- Como usuario puedo editar una tarea haciendo clic sobre la misma y modificando sus datos en un formulario igual al de alta.
+Abrí el navegador en [http://localhost:5173](http://localhost:5173) y listo, ¡a organizar tu día!
 
-### Persistencia de datos
-A fines de facilitar el desarrollo de la aplicación, se creó una API REST utilizando json-server a partir del archivo ```/db.json```. Algunos de los endpoints que se pueden utilizar:
+## 💡 Decisiones de diseño
 
-- ```GET localhost:3000/tasks```
-- ```GET localhost:3000/tasks/{id}```
-- ```PUT localhost:3000/tasks/{id}```
-- ```POST localhost:3000/tasks```
-- ```GET localhost:3000/categories```
+- **Responsividad:** Aunque no se pedía explícitamente, la app es responsiva.
+- **Alto máximo en listas:** A los contenedores de listas les puse un alto máximo y scroll interno. Así, aunque tengas mil tareas, no tenés que scrollear toda la web para ver el botón de agregar o la sección de terminadas. En un proyecto real, esto lo hubiera charlado con el equipo de diseño para definir la mejor UX.
 
-Para más información acerca de json-server, visitar [https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server).
+## 🗂️ ¿Cómo está armado?
 
-### Alcance
-Queda fuera del alcance de este ejercicio el manejo de usuarios: la aplicación podrá ser utilizada por un único usuario y no necesitará loguearse.
+```
+src/
+  components/      # Componentes reutilizables (Item, TaskList, TaskModal, etc.)
+  hooks/           # Custom hooks para la lógica
+  screens/         # Vistas principales
+  services/        # Llamadas a la API
+  styles/          # Temas y estilos globales
+  types/           # Tipos TypeScript
+  utils/           # Utilidades varias
+```
 
-### ¿Cómo ejecutar?
-Para iniciar la API REST (json-server) ejecutar ```npm run db```.
+## 🙌 Créditos
+- Hecho con mucho mate por Estefanía Avalos.
 
-Para inciar la aplicación ejecutar ```npm run dev```.
+---
+¡Gracias por tu pasar!

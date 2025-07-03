@@ -2,7 +2,7 @@ import React from "react";
 import { List, Typography } from "@mui/material";
 import { Item } from "../";
 import { Task } from "../../types";
-import { TaskListPaper } from "./TaskList.styles";
+import { TaskListPaper, StickyTitle } from "./TaskList.styles";
 
 interface TaskListProps {
   title: string;
@@ -12,6 +12,7 @@ interface TaskListProps {
   completed?: boolean;
   onEdit?: (task: Task) => void;
   action?: React.ReactNode;
+  maxHeight?: string;
 }
 
 const TaskList: React.FC<TaskListProps> = ({
@@ -22,11 +23,14 @@ const TaskList: React.FC<TaskListProps> = ({
   completed,
   onEdit,
   action,
+  maxHeight,
 }) => (
-  <TaskListPaper>
-    <Typography variant="h6" fontWeight={500} mb={2}>
-      {title}
-    </Typography>
+  <TaskListPaper maxHeight={maxHeight}>
+    <StickyTitle>
+      <Typography variant="h6" fontWeight={500} mt={0} mb={0} pt={3} pb={2}>
+        {title}
+      </Typography>
+    </StickyTitle>
     <List disablePadding>
       {tasks.map((task) => (
         <Item

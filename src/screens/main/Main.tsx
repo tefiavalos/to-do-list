@@ -57,6 +57,7 @@ function Main() {
             onToggleCompleted={handleToggleCompleted}
             completed={false}
             onEdit={handleEdit}
+            maxHeight="40vh"
           />
           <TaskList
             title="Terminadas"
@@ -65,6 +66,7 @@ function Main() {
             onToggleCompleted={handleToggleCompleted}
             completed={true}
             onEdit={handleEdit}
+            maxHeight="25vh"
           />
           <FabBox>
             <Fab color="primary" aria-label="add" onClick={handleOpen} sx={fabSx}>

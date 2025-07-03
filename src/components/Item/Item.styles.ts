@@ -92,6 +92,8 @@ export const StyledIcon = styled("div", {
   shouldForwardProp: (prop) => prop !== "$completed" && prop !== "$color",
 })<{ $completed?: boolean; $color?: string }>(
   ({ theme, $completed, $color }) => ({
+    display: 'flex',
+    alignItems: 'center',
     fontSize: 22,
     color: $completed ? theme.palette.text.disabledText : $color || "inherit",
     marginRight: 8,
