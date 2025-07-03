@@ -67,8 +67,10 @@ const TaskModal: React.FC<TaskModalProps> = ({
           setSelectedColor={setSelectedColor}
         />
         <StyledTextField
+          id="task-title-input"
           variant="standard"
           label="Título"
+          name="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           fullWidth
@@ -82,8 +84,10 @@ const TaskModal: React.FC<TaskModalProps> = ({
           inputProps={{ maxLength: 40, "aria-label": "Título" }}
         />
         <StyledTextField
+          id="task-description-input"
           variant="standard"
           label="Descripción"
+          name="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           fullWidth
@@ -104,6 +108,7 @@ const TaskModal: React.FC<TaskModalProps> = ({
           <StyledSelect
             labelId="categoria-label"
             id="categoria-select"
+            name="category"
             value={selectedCategory ?? ""}
             onChange={(e) => setSelectedCategory(e.target.value as string)}
             label="Categoría"

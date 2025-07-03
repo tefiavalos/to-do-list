@@ -10,6 +10,7 @@ import {
   StyledCheckbox,
   StyledIcon,
 } from "./Item.styles";
+import { FormControlLabel } from "@mui/material";
 
 const Item: React.FC<ItemProps> = ({
   task,
@@ -29,10 +30,18 @@ const Item: React.FC<ItemProps> = ({
 
   return (
     <ItemContainer onClick={handleContainerClick}>
-      <StyledCheckbox
-        checked={task.completed}
-        onChange={() => onToggleCompleted(task)}
-        color="primary"
+      <FormControlLabel
+        control={
+          <StyledCheckbox
+            id={`checkbox-task-${task.id}`}
+            name={`completed-task-${task.id}`}
+            checked={task.completed}
+            onChange={() => onToggleCompleted(task)}
+            color="primary"
+            aria-label={`Marcar como ${task.completed ? 'pendiente' : 'completada'} la tarea ${task.title}`}
+          />
+        }
+        label=""
       />
       {IconComponent && (
         <StyledIcon $completed={completed} $color={task.color ?? undefined}>

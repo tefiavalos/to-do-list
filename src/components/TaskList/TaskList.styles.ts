@@ -1,7 +1,9 @@
 import { Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const TaskListPaper = styled(Paper)<{ maxHeight?: string }>(({ theme, maxHeight }) => ({
+export const TaskListPaper = styled(Paper, {
+  shouldForwardProp: (prop) => prop !== 'maxHeight',
+})<{ maxHeight?: string }>(({ theme, maxHeight }) => ({
   width: "100%",
   borderRadius: theme.custom.itemBoxRadius,
   paddingLeft: theme.spacing(4),
