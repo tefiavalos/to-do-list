@@ -18,10 +18,7 @@
 ## 🚦 ¿Cómo lo usás?
 
 1. **Cloná el repo:**
-   ```bash
-   git clone https://github.com/tu-usuario/minder-sa-frontend-exercise.git
-   cd minder-sa-frontend-exercise
-   ```
+
 2. **Instalá las dependencias:**
    ```bash
    npm install
