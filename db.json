@@ -1,0 +1,88 @@
+{
+  "categories": [
+    {
+      "id": "46265b1f-ffba-5cd2-9d55-36ec7e3ac095",
+      "name": "Compras"
+    },
+    {
+      "id": "65125b62-8778-5bc8-89ac-098057b9a390",
+      "name": "Trabajo"
+    },
+    {
+      "id": "24c202cd-6076-58aa-a2e2-3bc3f7d99428",
+      "name": "Estudios"
+    },
+    {
+      "id": "c135e963-95be-57c5-926c-fee29681b66d",
+      "name": "Deportes"
+    },
+    {
+      "id": "49078200-32bd-5718-a6e5-5c4e08c0ed9c",
+      "name": "Entretenimiento"
+    },
+    {
+      "id": "c39e10f9-7355-5eac-bdff-99b08f1eb0cc",
+      "name": "Salud"
+    },
+    {
+      "id": "8c08c709-6f07-544f-8377-f630a5d0a67d",
+      "name": "Familia"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "664a90a5-22ed-588c-b113-b6373f5f4dd3",
+      "title": "Completar tests unitarios",
+      "description": "Obtener un coverage del 90",
+      "category_id": "49078200-32bd-5718-a6e5-5c4e08c0ed9c",
+      "completed": false,
+      "icon": "",
+      "color": ""
+    },
+    {
+      "id": "c77b2e4c-0992-55b4-ac93-a6dad915a754",
+      "title": "Revisar políticas",
+      "description": "Asegurarse de que los empleados estén al tanto de las políticas",
+      "category_id": "65125b62-8778-5bc8-89ac-098057b9a390",
+      "completed": false,
+      "icon": "",
+      "color": ""
+    },
+    {
+      "id": "cbdb75a0-5808-556b-8f6c-fbe2c162752b",
+      "title": "Completar todos los objetivos",
+      "description": "",
+      "category_id": "49078200-32bd-5718-a6e5-5c4e08c0ed9c",
+      "completed": false,
+      "icon": "",
+      "color": ""
+    },
+    {
+      "id": "1dea00ea-dd83-5338-b5d7-0b5177c8545e",
+      "title": "Armar objetivos para el año que viene",
+      "description": "Definir metas claras y alcanzables",
+      "category_id": "24c202cd-6076-58aa-a2e2-3bc3f7d99428",
+      "completed": true,
+      "icon": null,
+      "color": null
+    },
+    {
+      "title": "Pitu",
+      "description": "",
+      "category_id": "8c08c709-6f07-544f-8377-f630a5d0a67d",
+      "icon": null,
+      "completed": false,
+      "color": null,
+      "id": "zDyq9Tj"
+    },
+    {
+      "title": "Test",
+      "description": "Hola",
+      "category_id": "46265b1f-ffba-5cd2-9d55-36ec7e3ac095",
+      "icon": "flight",
+      "completed": false,
+      "color": "#FF5252",
+      "id": "v5lJ_K_"
+    }
+  ]
+}
